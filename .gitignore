@@ -1,0 +1,4 @@
+# Project exclude paths
+/redis/target/
+/spring-boot-kafka-consumer-example/target/
+/target/
