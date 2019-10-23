@@ -5,6 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+<!--        <version>1.5.6.RELEASE</version>-->
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -15,10 +16,27 @@
     <version>0.0.1-SNAPSHOT</version>
 <!--    <modelVersion>4.0.0</modelVersion>-->
     <properties>
+        <spring.data.redis>1.2.1.RELEASE</spring.data.redis>
+        <jedis>2.4.2</jedis>
         <java.version>8</java.version>
     </properties>
+<!--    <properties>-->
+<!--        <spring.data.redis>1.2.1.RELEASE</spring.data.redis>-->
+<!--        <jedis>2.4.2</jedis>-->
+<!--    </properties>-->
 
 <dependencies>
+    <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-redis</artifactId>
+        <!--suppress UnresolvedMavenProperty -->
+<!--        <version>${spring.data.redis}</version>-->
+    </dependency>
+    <dependency>
+        <groupId>redis.clients</groupId>
+        <artifactId>jedis</artifactId>
+<!--        <version>${jedis}</version>-->
+    </dependency>
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
@@ -41,8 +59,26 @@
         <version>2.0.0</version>
     </dependency>
     <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.9.4</version>
+    </dependency>
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-data-redis-reactive</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>org.springframework.data</groupId>-->
+<!--        <artifactId>spring-data-redis</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>redis.clients</groupId>-->
+<!--        <artifactId>jedis</artifactId>-->
+<!--        <version>2.9.0</version>-->
+<!--    </dependency>-->
+    <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -68,6 +104,10 @@
         <groupId>org.apache.kafka</groupId>
         <artifactId>kafka-clients</artifactId>
     </dependency>
+<!--    <dependency>-->
+<!--        <groupId>redis.clients</groupId>-->
+<!--        <artifactId>jedis</artifactId>-->
+<!--    </dependency>-->
 
     <!--        <dependency>-->
     <!--            <groupId>org.springframework.boot</groupId>-->
@@ -81,6 +121,18 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>
         <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>kafka-clients</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>kafka-clients</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>kafka-clients</artifactId>
     </dependency>
     <!-- <dependency>
          <groupId>org.postgresql</groupId>
